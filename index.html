@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор стоимости услуги</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Калькулятор стоимости услуги</h1>
+
+      <div class="form-group">
+        <label for="quantity">Количество человек:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" />
+      </div>
+
+      <div class="form-group">
+        <label>Тип услуги:</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="serviceType" value="basic" checked />
+            Стрижка машинкой
+          </label>
+          <label>
+            <input type="radio" name="serviceType" value="premium" />
+            Стрижка комбинированными техниками
+          </label>
+          <label>
+            <input type="radio" name="serviceType" value="custom" />
+            Дополнительная услуга
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group" id="optionsGroup" style="display: none">
+        <label for="options">Выбор специалиста:</label>
+        <select id="options" name="options">
+          <option value="standard">Михаил (стажёр)</option>
+          <option value="advanced">Максим (мастер)</option>
+          <option value="professional">Эдуард (главный мастер)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="propertyGroup" style="display: none">
+        <label>
+          <input type="checkbox" id="property" name="property" />
+          Массаж шеи (делает стажер после стрижки в комбинированной технике)
+        </label>
+      </div>
+
+      <div class="result">
+        <h2>Итоговая стоимость: <span id="totalPrice">0</span> руб.</h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
